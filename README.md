@@ -1,53 +1,65 @@
-# EduGenie 3
+# 🎓 EduGenie3 — AI-Powered Learning Assistant
 
-Google Gemini Powered Learning Assistant with a fallback response system.
+> An AI-powered learning assistant designed to help students learn concepts, practice quizzes, and track their learning progress.
 
-## Features
+## 🚀 Live Demo
 
-- Gemini AI as the primary response engine
-- Automatic fallback when Gemini is unavailable
-- Flask backend
-- Clean responsive chat UI
-- API key stored in `.env`
+### 🌐 Try EduGenie3 Online
 
-## Setup
+👉 **[Open EduGenie3 Live Demo](https://edugenie3.onrender.com)**
 
-### 1. Create virtual environment
+**Live Application:**  
+https://edugenie3.onrender.com
 
-```bash
-python -m venv venv
-```
+---
 
-### 2. Activate
+## 📌 About The Project
 
-Windows:
+**EduGenie3** is a web-based AI-powered learning assistant developed to provide students with an interactive and personalized learning experience.
 
-```bash
-venv\Scripts\activate
-```
+The application combines **Google Gemini AI** with a **fallback response system** to provide learning assistance while maintaining basic functionality even when the Gemini API is temporarily unavailable.
 
-### 3. Install packages
+EduGenie3 provides students with:
 
-```bash
-pip install -r requirements.txt
-```
+- 🤖 AI-powered learning assistance
+- 📚 Subject-based learning
+- 🧠 Interactive quizzes
+- 📊 Learning progress tracking
+- 🔄 AI fallback support
+- 🎨 Modern and responsive user interface
 
-### 4. Configure Gemini
+---
 
-Copy `.env.example` to `.env` and add your Gemini API key:
+## ✨ Features
 
-```env
-GEMINI_API_KEY=your_api_key_here
-```
+### 🤖 AI Learning Assistant
 
-### 5. Run
+Students can ask questions and receive AI-generated explanations using Google Gemini.
 
-```bash
-python app.py
-```
+**Features:**
 
-Open:
+- Ask academic questions
+- Get AI-generated explanations
+- Student-friendly responses
+- Interactive learning support
 
-http://127.0.0.1:5000
+---
 
-If Gemini reaches its limit or fails, EduGenie automatically uses the fallback engine.
+### 🔄 AI Fallback System
+
+EduGenie3 includes a fallback mechanism to maintain application functionality when Gemini is unavailable.
+
+```text
+                    User Question
+                         │
+                         ▼
+                  Gemini AI Available?
+                    /           \
+                  YES             NO
+                   │               │
+                   ▼               ▼
+             Gemini Response   Fallback System
+                   │               │
+                   └───────┬───────┘
+                           ▼
+                     Student Response
