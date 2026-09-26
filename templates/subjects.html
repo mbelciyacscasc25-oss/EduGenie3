@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>EduGenie | Subjects</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/subjects.css') }}">
+</head>
+
+<body>
+
+<div class="subjects-page">
+
+    <!-- ================= TOP BAR ================= -->
+
+    <header class="topbar">
+
+        <div class="brand">
+
+            <a href="/dashboard" class="back-button">
+                ←
+            </a>
+
+            <div class="logo">
+                🎓
+            </div>
+
+            <div>
+                <h1>EduGenie</h1>
+                <p>Learning Assistant</p>
+            </div>
+
+        </div>
+
+
+        <a href="/ai-tutor" class="ai-button">
+            🤖 Ask AI
+        </a>
+
+    </header>
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="main-container">
+
+        <section class="page-heading">
+
+            <span class="heading-label">
+                📚 Learning Library
+            </span>
+
+            <h2>
+                Explore Your Subjects
+            </h2>
+
+            <p>
+                Choose a subject and start learning with
+                EduGenie's AI-powered learning assistant.
+            </p>
+
+        </section>
+
+
+        <!-- ================= SUBJECT GRID ================= -->
+
+        <section class="subject-grid">
+
+
+            <!-- Computer Science -->
+
+            <a href="/ai-tutor?subject=Computer%20Science"
+               class="subject-card">
+
+                <div class="subject-icon blue">
+                    💻
+                </div>
+
+                <div class="subject-content">
+
+                    <h3>
+                        Computer Science
+                    </h3>
+
+                    <p>
+                        Programming, AI, DBMS, Operating Systems
+                        and computer fundamentals.
+                    </p>
+
+                    <span class="explore">
+                        Explore Subject →
+                    </span>
+
+                </div>
+
+            </a>
+
+
+            <!-- Mathematics -->
+
+            <a href="/ai-tutor?subject=Mathematics"
+               class="subject-card">
+
+                <div class="subject-icon purple">
+                    📐
+                </div>
+
+                <div class="subject-content">
+
+                    <h3>
+                        Mathematics
+                    </h3>
+
+                    <p>
+                        Algebra, Geometry, Probability,
+                        Statistics and more.
+                    </p>
+
+                    <span class="explore">
+                        Explore Subject →
+                    </span>
+
+                </div>
+
+            </a>
+
+
+            <!-- Physics -->
+
+            <a href="/ai-tutor?subject=Physics"
+               class="subject-card">
+
+                <div class="subject-icon orange">
+                    ⚡
+                </div>
+
+                <div class="subject-content">
+
+                    <h3>
+                        Physics
+                    </h3>
+
+                    <p>
+                        Motion, Energy, Force, Gravity,
+                        Electricity and more.
+                    </p>
+
+                    <span class="explore">
+                        Explore Subject →
+                    </span>
+
+                </div>
+
+            </a>
+
+
+            <!-- Chemistry -->
+
+            <a href="/ai-tutor?subject=Chemistry"
+               class="subject-card">
+
+                <div class="subject-icon red">
+                    🧪
+                </div>
+
+                <div class="subject-content">
+
+                    <h3>
+                        Chemistry
+                    </h3>
+
+                    <p>
+                        Atoms, Molecules, Reactions,
+                        Elements and compounds.
+                    </p>
+
+                    <span class="explore">
+                        Explore Subject →
+                    </span>
+
+                </div>
+
+            </a>
+
+
+            <!-- Biology -->
+
+            <a href="/ai-tutor?subject=Biology"
+               class="subject-card">
+
+                <div class="subject-icon green">
+                    🌱
+                </div>
+
+                <div class="subject-content">
+
+                    <h3>
+                        Biology
+                    </h3>
+
+                    <p>
+                        Cells, Human Body, Plants,
+                        Genetics and life science.
+                    </p>
+
+                    <span class="explore">
+                        Explore Subject →
+                    </span>
+
+                </div>
+
+            </a>
+
+
+            <!-- General Science -->
+
+            <a href="/ai-tutor?subject=General%20Science"
+               class="subject-card">
+
+                <div class="subject-icon teal">
+                    🔬
+                </div>
+
+                <div class="subject-content">
+
+                    <h3>
+                        General Science
+                    </h3>
+
+                    <p>
+                        Everyday science, environment,
+                        technology and discoveries.
+                    </p>
+
+                    <span class="explore">
+                        Explore Subject →
+                    </span>
+
+                </div>
+
+            </a>
+
+        </section>
+
+
+        <!-- ================= AI BANNER ================= -->
+
+        <section class="ai-banner">
+
+            <div class="ai-banner-icon">
+                🧠
+            </div>
+
+            <div class="ai-banner-content">
+
+                <h2>
+                    Need help understanding a topic?
+                </h2>
+
+                <p>
+                    Ask EduGenie to explain difficult concepts
+                    in simple, student-friendly language.
+                </p>
+
+            </div>
+
+            <a href="/ai-tutor" class="banner-button">
+                Ask EduGenie →
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <span>EduGenie</span>
+
+        <span>•</span>
+
+        <span>
+            AI Powered Learning Assistant
+        </span>
+
+    </footer>
+
+</div>
+
+</body>
+</html>

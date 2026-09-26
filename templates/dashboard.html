@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>EduGenie | Dashboard</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/dashboard.css') }}">
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="sidebar">
+
+        <div class="brand">
+
+            <div class="logo">🎓</div>
+
+            <div>
+                <h2>EduGenie</h2>
+                <span>Learning Assistant</span>
+            </div>
+
+        </div>
+
+
+        <nav class="nav-menu">
+
+            <a href="/dashboard" class="nav-item active">
+                <span>🏠</span>
+                <span>Dashboard</span>
+            </a>
+
+            <a href="/ai-tutor" class="nav-item">
+                <span>💬</span>
+                <span>AI Tutor</span>
+            </a>
+
+            <a href="/subjects" class="nav-item">
+                <span>📚</span>
+                <span>Subjects</span>
+            </a>
+
+            <a href="/quiz" class="nav-item">
+                <span>📝</span>
+                <span>Quiz</span>
+            </a>
+
+            <a href="/progress" class="nav-item">
+                <span>📊</span>
+                <span>Progress</span>
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-bottom">
+
+            <div class="ai-status">
+                <span class="status-dot"></span>
+
+                <div>
+                    <strong>AI Assistant</strong>
+                    <small>Ready to help</small>
+                </div>
+            </div>
+
+        </div>
+
+    </aside>
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="main-content">
+
+        <!-- TOP BAR -->
+
+        <header class="topbar">
+
+            <div>
+                <h1>Welcome to EduGenie 👋</h1>
+
+                <p>
+                    Continue your learning journey and explore new topics.
+                </p>
+            </div>
+
+
+            <div class="profile">
+
+                <div class="profile-avatar">
+                    S
+                </div>
+
+                <div class="profile-info">
+                    <strong>Student</strong>
+                    <small>Learner</small>
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- ================= HERO ================= -->
+
+        <section class="hero">
+
+            <div class="hero-content">
+
+                <span class="hero-label">
+                    ✨ AI Powered Learning
+                </span>
+
+                <h2>
+                    Learn anything.<br>
+                    Understand everything.
+                </h2>
+
+                <p>
+                    Ask questions, explore subjects, practice quizzes
+                    and improve your knowledge with EduGenie.
+                </p>
+
+                <a href="/ai-tutor" class="primary-button">
+                    Start Learning
+                    <span>→</span>
+                </a>
+
+            </div>
+
+
+            <div class="hero-illustration">
+                🎓
+            </div>
+
+        </section>
+
+
+        <!-- ================= QUICK ACTIONS ================= -->
+
+        <section class="section">
+
+            <div class="section-heading">
+
+                <div>
+                    <h2>Quick Actions</h2>
+                    <p>Start learning with one click.</p>
+                </div>
+
+            </div>
+
+
+            <div class="action-grid">
+
+                <a href="/ai-tutor" class="action-card">
+
+                    <div class="action-icon blue">
+                        🤖
+                    </div>
+
+                    <div>
+                        <h3>Ask AI</h3>
+
+                        <p>
+                            Ask EduGenie any academic question.
+                        </p>
+                    </div>
+
+                    <span class="arrow">→</span>
+
+                </a>
+
+
+                <a href="/quiz" class="action-card">
+
+                    <div class="action-icon purple">
+                        📝
+                    </div>
+
+                    <div>
+                        <h3>Take Quiz</h3>
+
+                        <p>
+                            Test your knowledge with quizzes.
+                        </p>
+                    </div>
+
+                    <span class="arrow">→</span>
+
+                </a>
+
+
+                <a href="/subjects" class="action-card">
+
+                    <div class="action-icon green">
+                        📚
+                    </div>
+
+                    <div>
+                        <h3>Explore Subjects</h3>
+
+                        <p>
+                            Learn concepts from different subjects.
+                        </p>
+                    </div>
+
+                    <span class="arrow">→</span>
+
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= SUBJECTS ================= -->
+
+        <section class="section" id="subjects">
+
+            <div class="section-heading">
+
+                <div>
+                    <h2>Explore Subjects</h2>
+
+                    <p>
+                        Choose a subject and start learning.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="subject-grid">
+
+                <a href="/" class="subject-card">
+
+                    <div class="subject-icon blue">
+                        💻
+                    </div>
+
+                    <div>
+                        <h3>Computer Science</h3>
+
+                        <p>
+                            Programming, AI, DBMS and more
+                        </p>
+                    </div>
+
+                </a>
+
+
+                <a href="/" class="subject-card">
+
+                    <div class="subject-icon green">
+                        🔬
+                    </div>
+
+                    <div>
+                        <h3>Science</h3>
+
+                        <p>
+                            Physics, Chemistry and Biology
+                        </p>
+                    </div>
+
+                </a>
+
+
+                <a href="/" class="subject-card">
+
+                    <div class="subject-icon orange">
+                        📐
+                    </div>
+
+                    <div>
+                        <h3>Mathematics</h3>
+
+                        <p>
+                            Algebra, Geometry and Probability
+                        </p>
+                    </div>
+
+                </a>
+
+
+                <a href="/" class="subject-card">
+
+                    <div class="subject-icon pink">
+                        🌱
+                    </div>
+
+                    <div>
+                        <h3>Environment</h3>
+
+                        <p>
+                            Nature, pollution and climate
+                        </p>
+                    </div>
+
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= PROGRESS ================= -->
+
+        <section class="section" id="progress">
+
+            <div class="section-heading">
+
+                <div>
+                    <h2>Your Learning Overview</h2>
+
+                    <p>
+                        Your learning statistics will appear here.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="stats-grid">
+
+                <div class="stat-card">
+
+                    <a href="/subjects" class="action-card">
+
+                    <div class="stat-icon blue">
+                        📚
+                    </div>
+
+                    <div>
+                        <span>Subjects</span>
+                        <strong>4</strong>
+                    </div>
+                    </a>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <a href="/ai-tutor" class="action-card">
+
+                    <div class="stat-icon purple">
+                        💬
+                    </div>
+
+                    <div>
+                        <span>AI Questions</span>
+                        <strong>0</strong>
+                    </div>
+                    </a>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <a href="/quiz" class="action-card">
+
+                    <div class="stat-icon green">
+                        📝
+                    </div>
+
+                    <div>
+                        <span>Quizzes</span>
+                        <strong>0</strong>
+                    </div>
+                    </a>
+
+                </div>
+
+
+                <div class="stat-card">
+
+
+                    <a href="/progress" class="action-card">
+
+                    <div class="stat-icon orange">
+                        ⭐
+                    </div>
+
+                    <div>
+                        <span>Learning Points</span>
+                        <strong>0</strong>
+                    </div>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= QUIZ ================= -->
+
+        <section class="quiz-banner" id="quiz">
+
+            <div>
+
+                <span>🧠 Challenge Yourself</span>
+
+                <h2>
+                    Ready to test your knowledge?
+                </h2>
+
+                <p>
+                    Practice quizzes will help you understand
+                    concepts and track your progress.
+                </p>
+
+            </div>
+
+
+            <a href="{{ url_for('quiz') }}"
+   class="secondary-button">
+
+    Start Quiz →
+
+</a>
+
+        </section>
+
+
+        <!-- ================= FOOTER ================= -->
+
+        <footer>
+
+            <span>EduGenie</span>
+
+            <span>•</span>
+
+            <span>
+                AI Powered Learning Assistant
+            </span>
+
+        </footer>
+
+    </main>
+
+</div>
+
+
+<script>
+
+function comingSoon() {
+
+    alert(
+        "📝 Quiz Module\n\n" +
+        "Coming soon! We will build the AI Quiz Generator next."
+    );
+
+}
+
+</script>
+
+</body>
+</html>

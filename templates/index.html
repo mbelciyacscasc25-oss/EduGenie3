@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>EduGenie | AI Learning Assistant</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+<div class="app">
+
+
+    <!-- ================= SELECTED SUBJECT ================= -->
+
+    {% if request.args.get('subject') %}
+    <div class="selected-subject">
+        <span>📚 Selected Subject</span>
+        <strong>{{ request.args.get('subject') }}</strong>
+    </div>
+    {% endif %}
+
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="topbar">
+
+        <div class="brand">
+
+            <div class="logo">
+                🎓
+            </div>
+
+            <div>
+                <h1>EduGenie</h1>
+                <p>AI Learning Assistant</p>
+            </div>
+
+        </div>
+
+        <div class="online-status">
+            <span class="status-dot"></span>
+            <span>AI Assistant Online</span>
+        </div>
+
+    </header>
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="main-container">
+
+        <!-- Welcome -->
+
+        <section class="welcome-section">
+
+            <div class="welcome-icon">
+                🧠
+            </div>
+
+            <h2>
+                Learn Smarter with <span>EduGenie</span>
+            </h2>
+
+            <p>
+                Your intelligent learning companion for Computer Science,
+                Science, Mathematics and more.
+            </p>
+
+        </section>
+
+
+        <!-- Quick Questions -->
+
+        <section class="quick-section">
+
+            <button class="quick-card"
+                    data-question="What is RAM?">
+
+                <div class="quick-icon blue">
+                    💻
+                </div>
+
+                <div>
+                    <strong>Computer Science</strong>
+                    <small>What is RAM?</small>
+                </div>
+
+            </button>
+
+
+            <button class="quick-card"
+                    data-question="What is photosynthesis?">
+
+                <div class="quick-icon green">
+                    🌱
+                </div>
+
+                <div>
+                    <strong>Biology</strong>
+                    <small>What is photosynthesis?</small>
+                </div>
+
+            </button>
+
+
+            <button class="quick-card"
+                    data-question="What is gravity?">
+
+                <div class="quick-icon orange">
+                    🌍
+                </div>
+
+                <div>
+                    <strong>Physics</strong>
+                    <small>What is gravity?</small>
+                </div>
+
+            </button>
+
+
+            <button class="quick-card"
+                    data-question="What is probability?">
+
+                <div class="quick-icon purple">
+                    📐
+                </div>
+
+                <div>
+                    <strong>Mathematics</strong>
+                    <small>What is probability?</small>
+                </div>
+
+            </button>
+
+        </section>
+
+
+        <!-- Chat Area -->
+
+        <section class="chat-container">
+
+            <div id="chatBox" class="chat-box">
+
+                <div class="empty-state">
+
+                    <div class="empty-icon">
+                        💬
+                    </div>
+
+                    <h3>Ask EduGenie anything</h3>
+
+                    <p>
+                        Ask questions and get simple,
+                        student-friendly explanations.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- Input -->
+
+            <form id="chatForm" class="input-area">
+
+                <div class="input-wrapper">
+
+                    <span class="input-icon">
+                        ✨
+                    </span>
+
+                    <input
+                        id="messageInput"
+                        type="text"
+                        placeholder="Ask a question about your studies..."
+                        autocomplete="off"
+                    >
+
+                </div>
+
+                <button
+                    type="submit"
+                    class="send-button"
+                    id="sendButton">
+
+                    <span>Send</span>
+                    <span class="send-icon">➤</span>
+
+                </button>
+
+            </form>
+
+
+            <div class="input-hint">
+
+                <span>🔒</span>
+
+                EduGenie uses Gemini AI first and automatically
+                switches to fallback learning mode when Gemini is unavailable.
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <span>EduGenie</span>
+        <span>•</span>
+        <span>AI Powered Learning Assistant</span>
+
+    </footer>
+
+</div>
+
+
+<script src="{{ url_for('static', filename='js/app.js') }}"></script>
+
+</body>
+</html>

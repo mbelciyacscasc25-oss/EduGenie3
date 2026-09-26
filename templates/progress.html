@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>EduGenie | My Progress</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/progress.css') }}">
+</head>
+
+<body>
+
+<div class="progress-page">
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="progress-header">
+
+        <div class="progress-brand">
+
+            <a href="/dashboard" class="back-button">
+                ←
+            </a>
+
+            <div class="brand-logo">
+                🎓
+            </div>
+
+            <div>
+                <h1>EduGenie</h1>
+                <p>AI Learning Assistant</p>
+            </div>
+
+        </div>
+
+        <a href="/quiz" class="quiz-button">
+            🧠 Take Quiz
+        </a>
+
+    </header>
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="progress-container">
+
+        <!-- PAGE TITLE -->
+
+        <section class="page-heading">
+
+            <span class="heading-label">
+                LEARNING ANALYTICS
+            </span>
+
+            <h2>My Progress</h2>
+
+            <p>
+                Track your quiz performance and monitor
+                your learning progress.
+            </p>
+
+        </section>
+
+
+        <!-- ================= SUMMARY CARDS ================= -->
+
+        <section class="summary-grid">
+
+            <div class="summary-card">
+
+                <div class="summary-icon purple">
+                    📝
+                </div>
+
+                <div>
+                    <span>Quizzes Completed</span>
+
+                    <strong id="quizCount">
+                        0
+                    </strong>
+                </div>
+
+            </div>
+
+
+            <div class="summary-card">
+
+                <div class="summary-icon blue">
+                    📊
+                </div>
+
+                <div>
+                    <span>Average Score</span>
+
+                    <strong id="averageScore">
+                        0%
+                    </strong>
+                </div>
+
+            </div>
+
+
+            <div class="summary-card">
+
+                <div class="summary-icon gold">
+                    🏆
+                </div>
+
+                <div>
+                    <span>Best Score</span>
+
+                    <strong id="bestScore">
+                        0%
+                    </strong>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= SUBJECT PERFORMANCE ================= -->
+
+        <section class="performance-card">
+
+            <div class="section-title">
+
+                <div>
+                    <span>
+                        SUBJECT PERFORMANCE
+                    </span>
+
+                    <h3>
+                        Your Learning Progress
+                    </h3>
+                </div>
+
+                <div class="performance-icon">
+                    📚
+                </div>
+
+            </div>
+
+
+            <div id="subjectPerformance"
+                 class="subject-performance">
+
+                <!-- JavaScript will insert subjects here -->
+
+            </div>
+
+
+            <div id="emptyProgress"
+                 class="empty-progress">
+
+                <div>
+                    📈
+                </div>
+
+                <h3>
+                    No quiz progress yet
+                </h3>
+
+                <p>
+                    Complete your first quiz to see
+                    your subject performance here.
+                </p>
+
+                <a href="/quiz">
+                    Start Your First Quiz →
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= RECENT QUIZZES ================= -->
+
+        <section class="recent-card">
+
+            <div class="section-title">
+
+                <div>
+                    <span>
+                        RECENT ACTIVITY
+                    </span>
+
+                    <h3>
+                        Recent Quizzes
+                    </h3>
+                </div>
+
+                <div class="performance-icon">
+                    🕒
+                </div>
+
+            </div>
+
+
+            <div id="recentQuizzes"
+                 class="recent-quizzes">
+
+                <!-- JavaScript will insert quiz history -->
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <span>EduGenie</span>
+
+        <span>•</span>
+
+        <span>
+            AI Powered Learning Assistant
+        </span>
+
+    </footer>
+
+</div>
+
+
+<script src="{{ url_for('static', filename='js/progress.js') }}"></script>
+
+</body>
+
+</html>

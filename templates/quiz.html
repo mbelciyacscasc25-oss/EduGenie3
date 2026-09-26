@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>EduGenie | Quiz</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/quiz.css') }}">
+</head>
+
+<body>
+
+<div class="quiz-page">
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="quiz-header">
+
+        <div class="quiz-brand">
+
+            <a href="/dashboard" class="back-button">
+                ←
+            </a>
+
+            <div class="brand-logo">
+                🎓
+            </div>
+
+            <div>
+                <h1>EduGenie</h1>
+                <p>Learning Assistant</p>
+            </div>
+
+        </div>
+
+        <a href="/ai-tutor" class="ask-ai-button">
+            🤖 Ask AI
+        </a>
+
+    </header>
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="quiz-container">
+
+        <!-- INTRO -->
+
+        <section id="quizIntro" class="quiz-intro">
+
+            <div class="intro-icon">
+                🧠
+            </div>
+
+            <span class="intro-label">
+                TEST YOUR KNOWLEDGE
+            </span>
+
+            <h2>
+                Challenge Yourself
+            </h2>
+
+            <p>
+                Choose a subject and test your knowledge with
+                EduGenie's interactive quiz.
+            </p>
+
+
+            <!-- SUBJECT SELECTION -->
+
+            <div class="subject-selection">
+
+                <label for="subjectSelect">
+                    Select Subject
+                </label>
+
+                <select id="subjectSelect">
+
+                    <option value="">
+                        Choose a subject
+                    </option>
+
+                    <option value="Computer Science">
+                        💻 Computer Science
+                    </option>
+
+                    <option value="Mathematics">
+                        📐 Mathematics
+                    </option>
+
+                    <option value="Physics">
+                        ⚡ Physics
+                    </option>
+
+                    <option value="Chemistry">
+                        🧪 Chemistry
+                    </option>
+
+                    <option value="Biology">
+                        🌱 Biology
+                    </option>
+
+                    <option value="General Science">
+                        🔬 General Science
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- QUESTION COUNT -->
+
+            <div class="question-selection">
+
+                <label>
+                    Number of Questions
+                </label>
+
+                <div class="question-options">
+
+                    <button
+                        type="button"
+                        class="count-option active"
+                        data-count="5">
+                        5
+                    </button>
+
+                    <button
+                        type="button"
+                        class="count-option"
+                        data-count="10">
+                        10
+                    </button>
+
+                    <button
+                        type="button"
+                        class="count-option"
+                        data-count="15">
+                        15
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <button
+                type="button"
+                id="startQuizBtn"
+                class="start-button">
+
+                Start Quiz
+                <span>→</span>
+
+            </button>
+
+            <p id="quizError" class="quiz-error"></p>
+
+        </section>
+
+
+        <!-- ================= QUIZ AREA ================= -->
+
+        <section id="quizArea"
+                 class="quiz-area hidden">
+
+            <!-- QUIZ TOP -->
+
+            <div class="quiz-top">
+
+                <div>
+
+                    <span class="quiz-subject-label">
+                        Subject
+                    </span>
+
+                    <h2 id="currentSubject">
+                        Computer Science
+                    </h2>
+
+                </div>
+
+
+                <div class="progress-info">
+
+                    <span id="questionNumber">
+                        Question 1 of 5
+                    </span>
+
+                    <div class="progress-bar">
+
+                        <div
+                            id="progressBar"
+                            class="progress-fill">
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- QUESTION CARD -->
+
+            <div class="question-card">
+
+                <span class="question-label">
+                    QUESTION
+                </span>
+
+                <h2 id="questionText">
+                    Loading question...
+                </h2>
+
+
+                <div id="optionsContainer"
+                     class="options-container">
+
+                </div>
+
+
+                <div class="question-footer">
+
+                    <span id="answerStatus">
+                        Select an answer
+                    </span>
+
+                    <button
+                        type="button"
+                        id="nextBtn"
+                        class="next-button"
+                        disabled>
+
+                        Next Question →
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= RESULT ================= -->
+
+        <section id="resultArea"
+                 class="result-area hidden">
+
+            <div class="result-icon">
+                🏆
+            </div>
+
+            <span class="result-label">
+                QUIZ COMPLETED
+            </span>
+
+            <h2>
+                Great Job!
+            </h2>
+
+            <p>
+                Here's how you performed.
+            </p>
+
+
+            <div class="score-card">
+
+                <div class="score-circle">
+
+                    <strong id="finalScore">
+                        0
+                    </strong>
+
+                    <span id="totalQuestions">
+                        / 5
+                    </span>
+
+                </div>
+
+
+                <div class="score-details">
+
+                    <div>
+                        <span>Correct Answers</span>
+                        <strong id="correctAnswers">
+                            0
+                        </strong>
+                    </div>
+
+                    <div>
+                        <span>Wrong Answers</span>
+                        <strong id="wrongAnswers">
+                            0
+                        </strong>
+                    </div>
+
+                    <div>
+                        <span>Percentage</span>
+                        <strong id="percentage">
+                            0%
+                        </strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="result-actions">
+
+                <button
+                    type="button"
+                    id="retryBtn"
+                    class="retry-button">
+
+                    🔄 Try Again
+
+                </button>
+
+                <a
+                    href="/dashboard"
+                    class="dashboard-button">
+
+                    🏠 Dashboard
+
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <span>EduGenie</span>
+
+        <span>•</span>
+
+        <span>
+            AI Powered Learning Assistant
+        </span>
+
+    </footer>
+
+</div>
+
+
+<script src="{{ url_for('static', filename='js/quiz.js') }}"></script>
+
+</body>
+</html>
